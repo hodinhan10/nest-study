@@ -1,4 +1,3 @@
-import { JwtAuthGuard } from '@auth/jwt/jwt-auth.guard';
 import {
   Body,
   Controller,
@@ -10,6 +9,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { JwtAuthGuard } from '../../auth/jwt/jwt-auth.guard';
 import { CreateTodoDto } from '../dto/create-todo.dto';
 import { UpdateTodoDto } from '../dto/update-todo.dto';
 import { TodoService } from '../service/todo.service';

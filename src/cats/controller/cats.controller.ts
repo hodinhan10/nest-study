@@ -1,9 +1,18 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Put, UseGuards } from '@nestjs/common';
-import { CatsService } from '../service/cats.service';
-import { CreateCatDto } from '../dto/create-cat.dto';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+  UseGuards,
+} from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
-import { JwtAuthGuard } from '@/auth/jwt/jwt-auth.guard';
+import { JwtAuthGuard } from '../../auth/jwt/jwt-auth.guard';
+import { CreateCatDto } from '../dto/create-cat.dto';
 import { UpdateCatDto } from '../dto/update-cat.dto';
+import { CatsService } from '../service/cats.service';
 
 @ApiTags('Carts')
 @ApiBearerAuth()

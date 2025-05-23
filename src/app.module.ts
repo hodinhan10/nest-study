@@ -9,10 +9,7 @@ import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      process.env.MONGO_CONNECTION_STRING ??
-        (() => {
-          throw new Error('MONGO_CONNECTION_STRING is not defined');
-        })(),
+      'mongodb+srv://hodinhan2k:YWj9t8g0eGixlcco@cluster0.axrlicb.mongodb.net/catsdb?retryWrites=true&w=majority',
     ),
     ConfigModule.forRoot({
       isGlobal: true,
